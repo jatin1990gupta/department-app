@@ -1,0 +1,13 @@
+.ImageBound {
+}
+
+.Frame {
+  background-color: #e7e7e7;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 2px 2px #e1e1e1;
+}
+
+.ImageBound img {
+  border: 2px solid #e1e1e1;
+}

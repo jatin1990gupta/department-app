@@ -1,0 +1,15 @@
+.ServicesSection {
+  margin: 70px 0px;
+}
+
+.ServicesSection > h3 {
+  font-size: 38px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.ServicesSection > p {
+  margin: 10px 0px;
+  font-size: 20px;
+  text-align: left;
+}

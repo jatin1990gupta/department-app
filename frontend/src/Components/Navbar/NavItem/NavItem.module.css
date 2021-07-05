@@ -1,0 +1,9 @@
+.NavItem {
+  display: flex;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+.NavItem:hover {
+  color: #5a22b9;
+}

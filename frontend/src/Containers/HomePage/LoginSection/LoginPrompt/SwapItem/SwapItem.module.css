@@ -1,0 +1,20 @@
+.SwapItem {
+  width: 45%;
+  height: 45px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.SwapItem p {
+  font-size: 14px;
+  /* margin: 0px 8px; */
+}
+
+.SwapItem img {
+  /* margin: 0px 8px; */
+}

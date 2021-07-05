@@ -1,0 +1,18 @@
+.VerifyElements {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.Bullet {
+  border-radius: 50%;
+  background: #e5e5e5;
+  height: 8px;
+  width: 8px;
+  margin: 0px 10px;
+}
+
+.VerifyElements p {
+  font-size: 14px;
+  color: #a6a6a6;
+}

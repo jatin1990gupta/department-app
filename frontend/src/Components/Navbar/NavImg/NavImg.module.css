@@ -1,0 +1,10 @@
+.NavImg {
+  display: flex;
+  align-items: center;
+}
+
+.NavImg img {
+  cursor: pointer;
+  height: 25px;
+  margin: 0px 15px;
+}

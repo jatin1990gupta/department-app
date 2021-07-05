@@ -1,0 +1,40 @@
+.SetPassPage {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+.SetPassPageLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 30%;
+}
+
+.SetPassPageRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fcfbf9;
+  align-items: center;
+  width: 60%;
+  padding: 20px;
+}
+
+.SetPassPageRight img {
+  height: 280px;
+}
+
+.SetPassPageRight h2 {
+  font-family: Merriweather;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 40px;
+  width: 70%;
+}
+
+.TopImg img {
+  height: 60px;
+  position: absolute;
+  margin: 20px 60px;
+}

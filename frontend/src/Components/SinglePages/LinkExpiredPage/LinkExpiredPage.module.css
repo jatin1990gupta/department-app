@@ -1,0 +1,34 @@
+.LinkExpiredPage {
+  padding: 20px 20px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.TopImg img {
+  height: 60px;
+}
+
+.CenterText {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.CenterText img {
+  height: 250px;
+}
+
+.FirstHead {
+  font-family: "Roboto Slab", serif;
+  font-size: 27px;
+  margin: 30px;
+}
+
+.SecondHead {
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  margin: 30px;
+  color: #414141;
+}
