@@ -29,13 +29,13 @@ app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get("/", async (req, res, next) => {
-  res.status(200).json({
-    statusCode: 200,
-    message: "Server Ping Successful.",
-    payload: {},
-  });
-});
+// app.get("/", async (req, res, next) => {
+//   res.status(200).json({
+//     statusCode: 200,
+//     message: "Server Ping Successful.",
+//     payload: {},
+//   });
+// });
 
 app.use("/", indexRoutes);
 app.use("/auth", authRoutes);

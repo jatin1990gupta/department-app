@@ -19,7 +19,9 @@ const api = async ({
     headers["content-type"] = contentType;
   }
 
-  url = Config.baseURL + url;
+  if (process.env.NODE_ENV !== "production") {
+    url = Config.baseURL + url;
+  }
 
   if (method === Method.get) {
     return axios[method](url, { headers })
