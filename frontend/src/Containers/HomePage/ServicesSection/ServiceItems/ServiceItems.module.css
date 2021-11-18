@@ -1,8 +1,0 @@
-.ServiceItems {
-  margin: 60px 0px;
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, fit-content);
-  grid-gap: 50px;
-}

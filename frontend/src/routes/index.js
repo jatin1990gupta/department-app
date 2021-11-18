@@ -1,19 +1,22 @@
-import MailSentPage from "../Components/SinglePages/MailSentPage/MailSentPage";
-import PasswordChanged from "../Components/SinglePages/PasswordChanged/PasswordChanged";
+import MailSentPage from "../Components/SinglePages/MailSentPage";
+import PasswordChanged from "../Components/SinglePages/PasswordChanged";
 import { Routes } from "../constants/routes";
-import ForgotPassword from "../Containers/ForgotPassword/ForgotPassword";
-import HomePage from "../Containers/HomePage/HomePage";
-import LeaveFormPage from "../Containers/LeaveFormPage/LeaveFormPage";
-import ProfilePage from "../Containers/ProfilePage/ProfilePage";
-import SetPassPage from "../Containers/SetPassPage/SetPassPage";
-import TimeTablePage from "../Containers/TimeTablePage/TimeTablePage";
+import ForgotPassword from "../Containers/ForgotPassword";
+import NoticePage from "../Containers/NoticePage";
+import LeaveFormPage from "../Containers/LeaveFormPage";
+import Profile from "../Containers/Profile";
+import SetPassPage from "../Containers/SetPassPage";
+import TimeTable from "../Containers/TimeTable";
+
+export const protectedRoutes = [
+  { path: Routes.notices, exact: true, component: NoticePage },
+  { path: Routes.profile, component: Profile },
+  { path: Routes.timetable, component: TimeTable },
+  { path: Routes.leaveForm, component: LeaveFormPage },
+];
 
 export const publicRoutes = [
-  { path: Routes.homePage, exact: true, component: HomePage },
   { path: Routes.forgotPass, component: ForgotPassword },
-  { path: Routes.profile, component: ProfilePage },
-  { path: Routes.leaveForm, component: LeaveFormPage },
-  { path: Routes.timetable, component: TimeTablePage },
   { path: Routes.resetMailSent, component: MailSentPage },
   { path: Routes.setPassword, component: SetPassPage },
   { path: Routes.passwordChanged, component: PasswordChanged },

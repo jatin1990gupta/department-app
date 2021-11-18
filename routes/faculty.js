@@ -1,9 +1,9 @@
 const express = require("express");
 
-const facultyController = require("../controllers/facultyController");
+const { uploadTT } = require("../controllers/facultyController");
 
 const router = express.Router();
 
-router.post("/uploadTT", facultyController.uploadTT);
+router.post("/uploadTT", uploadTT);
 
 module.exports = router;

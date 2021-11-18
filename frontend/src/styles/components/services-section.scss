@@ -1,0 +1,47 @@
+.services-section {
+  margin: 70px 0px;
+
+  & > h3 {
+    font-size: 38px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  & > p {
+    margin: 10px 0px;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  &__items {
+    margin: 60px 0px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, fit-content);
+    grid-gap: 50px;
+
+    &__item {
+      border: 1px solid gray;
+      border-radius: 5px;
+      padding: 25px;
+      text-align: left;
+
+      img {
+        height: 80px;
+      }
+
+      p:nth-child(1) {
+        font-weight: 400;
+        font-size: 22px;
+        margin: 15px 0px;
+      }
+
+      p:nth-child(2) {
+        font-weight: 300;
+        margin: 15px 0px;
+        font-size: 16px;
+      }
+    }
+  }
+}

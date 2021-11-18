@@ -1,11 +1,9 @@
 const express = require("express");
 
-const indexController = require("../controllers/indexController");
+const { fetchTT } = require("../controllers/indexController");
 
 const router = express.Router();
 
-router.get("/dashboard", indexController.dashboard);
-
-router.post("/fetchTT", indexController.fetchTT);
+router.post("/fetchTT", fetchTT);
 
 module.exports = router;

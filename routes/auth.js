@@ -1,16 +1,22 @@
 const express = require("express");
 
-const authController = require("../controllers/authController");
-const isAuth = require("../middlewares/isAuth");
+const {
+  studentLogin,
+  studentSignup,
+  resetLink,
+  setPassword,
+  facultyLogin,
+  facultySignup,
+} = require("../controllers/authController");
 
 const router = express.Router();
 
-router.post("/studentLogin", authController.studentLogin);
-router.post("/studentSignup", authController.studentSignup);
-router.post("/resetLink", authController.resetLink);
-router.post("/setPassword", authController.setPassword);
+router.post("/studentLogin", studentLogin);
+router.post("/studentSignup", studentSignup);
+router.post("/resetLink", resetLink);
+router.post("/setPassword", setPassword);
 
-router.post("/facultyLogin", authController.facultyLogin);
-router.post("/facultySignup", authController.facultySignup);
+router.post("/facultyLogin", facultyLogin);
+router.post("/facultySignup", facultySignup);
 
 module.exports = router;

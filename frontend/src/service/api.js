@@ -1,6 +1,8 @@
 import axios from "axios";
-import Config from "../config";
+import { Config } from "../config";
 import { Method } from "../constants/index";
+import { getAccessToken } from "../utils/storage";
+import { handleErrors } from "./errorHandler";
 
 const api = async ({
   url,
@@ -12,6 +14,8 @@ const api = async ({
   const headers = {};
 
   if (auth) {
+    const { accessToken } = getAccessToken();
+    headers.Authorization = `Bearer ${accessToken}`;
     headers["content-type"] = contentType;
   }
 
@@ -21,12 +25,14 @@ const api = async ({
     return axios[method](url, { headers })
       .then((res) => res)
       .catch((err) => {
+        handleErrors(err.response);
         return err.response.data;
       });
   }
   return axios[method](url, body, { headers })
     .then((res) => res)
     .catch((err) => {
+      handleErrors(err.response);
       return err.response.data;
     });
 };

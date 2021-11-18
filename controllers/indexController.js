@@ -1,27 +1,22 @@
 const TimeTable = require("../models/timetable");
 
-exports.dashboard = (req, res, next) => {
-  res.status(200).json({
-    msg: "Dashboard",
-  });
-};
-
 exports.fetchTT = async (req, res, next) => {
   try {
-    const ttOf = req.body.ttOf;
-    console.log(ttOf);
+    const { timeTableOf } = req.body;
 
-    await TimeTable.findOne({ ttOf: ttOf }, async (err, tt) => {
+    await TimeTable.findOne({ ttOf: timeTableOf }, async (err, timeTable) => {
       if (err) throw err;
       else {
-        if (tt) {
+        if (timeTable) {
           return res.status(200).json({
-            msg: "TT fetched.",
-            ttLink: tt.ttLink,
+            statusCode: 200,
+            message: "Fetch TimeTable Successful",
+            payload: { timeTableImg: timeTable.ttLink },
           });
         }
         return res.status(404).json({
-          msg: "TT doesn't exists.",
+          statusCode: 404,
+          message: "Not Found",
         });
       }
     });

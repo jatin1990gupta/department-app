@@ -31,7 +31,9 @@ app.use(bodyParser.json());
 
 app.get("/", async (req, res, next) => {
   res.status(200).json({
-    msg: "All okay.",
+    statusCode: 200,
+    message: "Server Ping Successful.",
+    payload: {},
   });
 });
 
@@ -45,10 +47,15 @@ app.use((error, req, res, next) => {
   const message = error.message;
   const data = error.data;
   res.status(status).json({
+    statusCode: status,
     message: message,
-    data: data,
+    payload: data,
   });
 });
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("frontend/build"));
+}
 
 app.listen(port, () => {
   console.log(`Server connected at port ${port}`);

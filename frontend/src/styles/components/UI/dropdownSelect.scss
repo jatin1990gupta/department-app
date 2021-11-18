@@ -1,0 +1,18 @@
+.dropdown {
+  select {
+    height: 50px;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 8px;
+    border: 1px solid #d1d0d0;
+    border-radius: 6px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    option {
+      font-size: 200%;
+    }
+  }
+}

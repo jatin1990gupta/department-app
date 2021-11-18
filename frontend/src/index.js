@@ -1,26 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore, combineReducers, applyMiddleware, compose } from "redux";
-import thunk from "redux-thunk";
-
-import "./index.css";
+import "./styles/index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import authReducer from "./store/reducers/auth";
-import generalReducer from "./store/reducers/general";
-
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const rootReducer = combineReducers({
-  auth: authReducer,
-  general: generalReducer,
-});
-
-const store = createStore(
-  rootReducer,
-  composeEnhancers(applyMiddleware(thunk))
-);
+import store from "./store/store";
 
 ReactDOM.render(
   <React.StrictMode>

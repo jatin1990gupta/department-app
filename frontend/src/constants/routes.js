@@ -1,5 +1,6 @@
 export const Routes = {
-  homePage: "/",
+  notices: "/",
+  login: "/login",
   forgotPass: "/forgotPass",
   resetMailSent: "/resetMailSent",
   setPassword: "/setPassword/:token",

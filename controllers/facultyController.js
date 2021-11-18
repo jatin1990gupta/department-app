@@ -2,33 +2,37 @@ const TimeTable = require("../models/timetable");
 
 exports.uploadTT = async (req, res, next) => {
   try {
-    const { ttOf, ttLink } = req.body;
+    const { timeTableOf, timeTableImg } = req.body;
 
-    await TimeTable.findOne({ ttOf: ttOf }, async (err, tt) => {
+    await TimeTable.findOne({ ttOf: timeTableOf }, async (err, timeTable) => {
       if (err) {
         throw err;
       } else {
-        if (tt) {
-          tt.ttLink = ttLink;
-          await tt.save((err) => {
+        if (timeTable) {
+          timeTable.ttLink = timeTableImg;
+          await timetable.save((err) => {
             if (err) throw err;
             else {
               res.status(200).json({
-                msg: "TimeTable Changed",
+                statusCode: 200,
+                message: "TimeTable Changed",
+                payload: { timeTableImg },
               });
             }
           });
         } else {
-          const tt = new TimeTable({
-            ttOf: ttOf,
-            ttLink: ttLink,
+          const timeTable = new TimeTable({
+            ttOf: timeTableOf,
+            ttLink: timeTableImg,
           });
 
-          await tt.save((err) => {
+          await timeTable.save((err) => {
             if (err) throw err;
             else {
               res.status(201).json({
-                msg: "New TimeTable Added",
+                statusCode: 201,
+                message: "TimeTable Uploaded",
+                payload: { timeTableImg },
               });
             }
           });
@@ -39,6 +43,15 @@ exports.uploadTT = async (req, res, next) => {
     if (!err.statusCode) {
       err.statusCode = 500;
     }
+    next(err);
+  }
+};
+
+exports.addStudent = (req, res, next) => {
+  try {
+    const {} = req.body;
+  } catch (err) {
+    if (!err.statusCode) err.statusCode = 500;
     next(err);
   }
 };

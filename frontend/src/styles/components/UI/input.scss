@@ -1,0 +1,39 @@
+.input {
+  position: relative;
+
+  span {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s ease-out;
+    pointer-events: none;
+  }
+
+  input {
+    position: relative;
+    margin: 8px auto;
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    height: 45px;
+    border: 1px solid #d1d0d0;
+    border-radius: 6px;
+    outline: none;
+  }
+
+  input:focus {
+    border: 2px solid #5a22b9;
+  }
+
+  input:focus + span,
+  input:valid + span {
+    top: 8px;
+    left: 20px;
+    color: #5a22b9;
+    font-size: 12px;
+    background: white;
+  }
+}

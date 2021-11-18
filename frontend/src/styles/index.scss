@@ -1,0 +1,58 @@
+@import "./mixins.scss";
+
+@import "./components/landing-page.scss";
+@import "./components/navbar.scss";
+@import "./components/timetable.scss";
+@import "./components/footer.scss";
+@import "./components/image-bound.scss";
+@import "./components/profile.scss";
+@import "./components/forgot-password.scss";
+@import "./components//notices.scss";
+@import "./components/leave-form.scss";
+@import "./components/login-section.scss";
+@import "./components/services-section.scss";
+@import "./components/set-password.scss";
+
+// UI Components
+@import "./components/UI/button.scss";
+@import "./components/UI/checkbox.scss";
+@import "./components/UI/dropdownSelect.scss";
+@import "./components/UI/input.scss";
+@import "./components/UI/spinner.scss";
+
+// Single Page Components
+@import "./components/SinglePages/link-expired.scss";
+@import "./components/SinglePages/mail-sent.scss";
+@import "./components/SinglePages/not-found.scss";
+@import "./components/SinglePages/password-changed.scss";
+@import "./components/SinglePages/reconnect.scss";
+@import "./components/SinglePages/server-down-page.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  text-align: center;
+  background-color: #fcfbf9;
+}
+
+// Assign Colors
+
+.primary-color {
+  color: #5a22b9;
+}
